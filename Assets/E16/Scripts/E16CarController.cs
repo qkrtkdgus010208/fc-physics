@@ -32,7 +32,7 @@ public class CarControl : MonoBehaviour
 
         // 차량의 전방 방향에 대한 현재 속도 계산
         // (뒤로 이동할 때 음수 반환)
-        float forwardSpeed = Vector3.Dot(transform.forward, rigidBody.velocity);
+        float forwardSpeed = Vector3.Dot(transform.forward, rigidBody.linearVelocity);
 
         // 최고 속도에 대한 차량의 현재 속도 계산
         // 0에서 1 사이의 숫자로

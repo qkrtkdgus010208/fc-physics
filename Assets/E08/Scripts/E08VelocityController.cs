@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class E08VelocityController : MonoBehaviour
 {
-    public float speed = 5f; // ÀÌµ¿ ¼Óµµ
+    public float speed = 5f; // ï¿½Ìµï¿½ ï¿½Óµï¿½
     Rigidbody rb;
 
     private void Start()
@@ -20,6 +20,6 @@ public class E08VelocityController : MonoBehaviour
 
         Vector3 movement = new Vector3(h, 0.0f, v);
 
-        rb.velocity = movement * speed;
+        rb.linearVelocity = movement * speed;
     }
 }
