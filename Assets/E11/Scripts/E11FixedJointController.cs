@@ -21,6 +21,9 @@ public class E11FixedJointController : MonoBehaviour
             Ray ray = new Ray(transform.position, Vector3.down);
             float rayLength = 1f;
 
+            // 디버그용 ray 시각화
+            Debug.DrawRay(ray.origin, ray.direction * rayLength, Color.red);
+
             // Raycast를 통해 Doll 태그 오브젝트 감지
             if (Physics.Raycast(ray, out RaycastHit hit, rayLength) && hit.collider.CompareTag("Doll"))
             {
